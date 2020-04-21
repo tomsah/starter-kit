@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    //we just want typescript to type check and
+    //let babel do the compiling
+    "noEmit": true, // we dont want to emit any file
+    "baseUrl": "./src"
+  }
+}

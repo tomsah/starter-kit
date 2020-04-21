@@ -1,4 +1,3 @@
-
 function add(a: number, b: number): number {
   return a + b
 }
@@ -19,4 +18,4 @@ function getFullName(user: User): string {
 
 add(1, 2)
 
-getFullName({name: {first: 'Joe', midd1e: 'Bud', last: 'Matthews'}})
+getFullName({name: {first: 'Joe', middle: 'Bud', last: 'Matthews'}})
