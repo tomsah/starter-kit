@@ -1,11 +1,22 @@
-const username = 'freddy'
-typeof username === 'string'
 
-if (!('serviceWorker' in navigator)) {
-  // you have an old browser :-(
+function add(a: number, b: number): number {
+  return a + b
 }
 
-const greeting = 'hello'
+interface User {
+  name: {
+    first: string
+    middle: string
+    last: string
+  }
+}
+function getFullName(user: User): string {
+  const {
+    name: {first, middle, last},
+  } = user
+  return [first, middle, last].filter(Boolean).join('')
+}
 
-console.log(`${greeting} world!`)
-;[1, 2, 3].forEach((x) => console.log(x))
+add(1, 2)
+
+getFullName({name: {first: 'Joe', midd1e: 'Bud', last: 'Matthews'}})
