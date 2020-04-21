@@ -10,7 +10,7 @@ this is the base of technology configure together:
 - Webpack
 - Babel
 - Jest
-- Eslint
+- [Eslint](https://eslint.org/)
 - Prettier
 - Husky
 - sass
