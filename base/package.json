@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production",
+    "postbuild": "cp ./public/index.html ./dist/index.html",
+    "start": "serve --no-clipboard --single --listen 8080 dist",
     "lint": "eslint --ignore-path .gitignore .",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(json|js|jsx)\"",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(json|js|jsx|css|html|md)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
     "validate": "npm-run-all --parallel check-format lint build"
@@ -37,6 +40,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "eslint": "^6.8.0",
+    "eslint-config-kentcdodds": "^14.8.1",
     "eslint-config-prettier": "^6.10.1",
     "file-loader": "^6.0.0",
     "husky": "^4.2.5",
