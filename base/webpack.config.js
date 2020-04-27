@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -11,21 +12,37 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/,
+      //   exclude: /\.module\.css$/,
+      //   use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
+      // },
       {
-        test: /\.css$/,
-        exclude: /\.module\.css$/,
-        use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
-      },
-      {
-        test: /\.module\.css$/,
+        test: /.(scss|css)$/,
+        exclude: /node_modules/,
         use: [
-          {loader: 'style-loader'},
           {
-            loader: 'css-loader',
-            options: {modules: true, localsConvention: 'camelCaseOnly'},
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              reloadAll: true,
+            },
           },
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
+      // {
+      //   // dealing with js css module ()
+      //   test: /\.module\.css$/,
+      //   use: [
+      //     {loader: 'style-loader'},
+      //     {
+      //       loader: 'css-loader',
+      //       options: {modules: true, localsConvention: 'camelCaseOnly'},
+      //     },
+      //   ],
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -37,6 +54,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+  ],
   devServer: {
     contentBase: path.join(__dirname, './public'),
     historyApiFallback: true,

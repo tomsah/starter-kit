@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  // https://github.com/kentcdodds/eslint-config-kentcdodds
   extends: [
     'kentcdodds',
     'kentcdodds/import',
