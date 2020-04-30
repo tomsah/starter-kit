@@ -15,7 +15,7 @@ build/
 .npm/
 # dotenv environment variables file
 .env
-# mac
+# mac os stuff
 .DS_Store
 # IDE
 .idea/
@@ -24,4 +24,6 @@ build/
 *.tgz
 #Coverage
 coverage/
+#webpack manifest and chunk files
+compilation-stats.json
 

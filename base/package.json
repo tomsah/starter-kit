@@ -4,15 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
-    "postbuild": "cp ./public/index.html ./dist/index.html",
-    "start": "serve --no-clipboard --single --listen 8080 dist",
+    "check-format": "npm run prettier -- --list-different",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev": "npm run webpack-dev-server -- --env.mode development --hot --open",
+    "dev:debug": "npm run debug -- --env.mode development",
+    "format": "npm run prettier -- --write",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(json|js|jsx|css|html|md)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-format lint build"
+    "prod": "npm run webpack -- --env.mode production",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compress": "npm run prod -- --env.presets compress",
+    "prod:allPresets": "npm run prod:compress -- --env.presets analyze",
+    "prod:debug": "npm run debug -- --env.mode production",
+    "start": "serve --no-clipboard --single --listen 8080 dist",
+    "validate": "npm-run-all --parallel check-format lint build",
+    "webpack": "webpack",
+    "webpack:json-profile": "webpack --profile --json > compilation-stats.json",
+    "webpack-dev-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -33,6 +42,7 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",

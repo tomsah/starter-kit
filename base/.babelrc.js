@@ -6,5 +6,9 @@ module.exports = {
     ['@babel/preset-env', {modules: isTest ? 'commonjs' : false}],
     '@babel/preset-react',
   ],
-  plugins: ['@babel/plugin-transform-runtime'],
+  plugins: [
+    '@babel/plugin-transform-runtime',
+    '@babel/plugin-syntax-dynamic-import', // support dynamic import for
+    // code-spitting => need to be double checked
+  ],
 }
