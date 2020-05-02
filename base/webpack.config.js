@@ -16,6 +16,13 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
         splitChunks: {
           // include all types of chunks
           chunks: 'all',
+          cacheGroups: {
+            commons: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendor',
+              chunks: 'initial',
+            },
+          },
         },
       },
       resolve: {
@@ -50,7 +57,7 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
       },
       output: {
         filename: 'bundle.js',
-        chunkFilename: '[name].lazy-chunk.js',
+        chunkFilename: '[name].js',
       },
       plugins: [
         new HtmlWebpackPlugin({

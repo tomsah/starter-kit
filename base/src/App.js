@@ -2,9 +2,9 @@ import React, {Component, Suspense, lazy} from 'react'
 import Dummy from './shared/components/example/Dummy'
 import DummyNav from './shared/components/example/dummyNav/DummyNav'
 
-// import DummyFooter from './shared/components/example/dummyFooter/DummyFooter'
 const DummyFooter = lazy(() =>
-  /* webpackChunkName: "footer" */ import(
+  import(
+    /* webpackChunkName: "footer" */
     './shared/components/example/dummyFooter/DummyFooter'
   ),
 )
