@@ -44,6 +44,9 @@ Initial = the amount of JS/CSS that you ship to get your initial experience load
 ## code Splitting
 Creating at build time separate chunks of JS that will only be loaded asynchronously
 
+"Code splitting exists to solve performance, and to solve the number 1 problem of performance, which is the amount of
+ JavaScript you ship on your initial experience"
+
 what does webpack under the hood???
 it takes your entry point,   
 it passes it to a resolver (just making sure the file exists)   
@@ -69,3 +72,6 @@ what's happening ?
 webpack will use the static path "./src/themes/" go to that folder and, it will find all the modules in this partial
  path. then it will create a bundle for each one of them.
     
+### The Preset config
+the point of presets is that you can add isolated functionality that allows you to experiment or test.
+you can just add on with a flag or add on with an extra script.

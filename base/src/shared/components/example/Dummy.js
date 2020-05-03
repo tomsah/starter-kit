@@ -7,11 +7,13 @@ import imgExample from './../../assets/images/avatar.jpg'
 // })
 
 // TODO: manged to extract the style and apply it
+// the code splitting bit is working we are only get the color related files
+// see npm run prod:analyze
 const setButtonStyle = (color) =>
   import(
     /* webpackChunkName: "[request]"
      */ `./button-styles/${color}`
-  ).then((style) => style.default)
+  )
 
 // React way to for code splitting (not working for SSR)
 const DummyCardAnim = lazy(() =>
@@ -45,7 +47,9 @@ const Dummy = () => {
   // it is not working, we dont get the style
   // it is not getting the style when 1st render
   async function fetchStyle() {
-    const response = await setButtonStyle('red')
+    const response = await setButtonStyle('red').then((x) => x.default)
+
+    // debugger
     setStyle(response)
   }
 
@@ -57,7 +61,9 @@ const Dummy = () => {
     <div className="dummy-box">
       <h1>I am the Dummy Component</h1>
       <img className="image-style" src={imgExample} alt="" />
-      <button onClick={handleClick} style={{buttonStyle}}>
+      <button
+        onClick={handleClick}
+        style={buttonStyle ? {buttonStyle} : {backgroundColor: ' pink'}}>
         show card
       </button>
       {showCard ? (
