@@ -70,7 +70,10 @@
       "node_modules/babel-loader/lib/index.js!src/index.js 97f69e25fb016dabda18b89675aec38b": 26,
       "node_modules/gsap/index.js 2de73ac0a9bacf671442a9a00d08fd1a": 27,
       "node_modules/babel-loader/lib/index.js!src/shared/components/example/dummyFooter/DummyFooter.js": 28,
-      "node_modules/babel-loader/lib/index.js!src/shared/components/example/dummyCardAnim/DummyCardAnim.js": 29
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/dummyCardAnim/DummyCardAnim.js": 29,
+      "node_modules/@babel/runtime/regenerator/index.js": 30,
+      "node_modules/@babel/runtime/helpers/asyncToGenerator.js": 31,
+      "node_modules/regenerator-runtime/runtime.js": 32
     },
     "usedIds": {
       "0": 0,
@@ -102,7 +105,10 @@
       "26": 26,
       "27": 27,
       "28": 28,
-      "29": 29
+      "29": 29,
+      "30": 30,
+      "31": 31,
+      "32": 32
     }
   },
   "chunks": {
