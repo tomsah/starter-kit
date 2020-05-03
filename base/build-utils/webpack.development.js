@@ -2,6 +2,10 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = () => ({
   devtool: 'cheap-module-source-map',
+  output: {
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+  },
   module: {
     rules: [
       {
@@ -24,7 +28,7 @@ module.exports = () => ({
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'bundle.css',
+      filename: '[name].css',
     }),
   ],
   devServer: {

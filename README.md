@@ -64,3 +64,8 @@ anything that's not visible on the page and will conditionally load (even things
 Routes, you can code split for each route and serve only what is needed
 
 - "dynamic"" (in quote cause in webpack nothing is purely dynamic, everything it does is at build tine.)
+example: const getTheme = (themeName) => import(`./src/themes/${themeName}`)
+what's happening ?   
+webpack will use the static path "./src/themes/" go to that folder and, it will find all the modules in this partial
+ path. then it will create a bundle for each one of them.
+    

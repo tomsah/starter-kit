@@ -18,11 +18,18 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
           chunks: 'all',
           cacheGroups: {
             commons: {
-              test: /[\\/]node_modules[\\/]/,
+              // create a separate chunk for the vendors
+              test: /[\\/]node_modulesc[\\/]/,
               name: 'vendor',
               chunks: 'initial',
             },
           },
+        },
+        // When webpack writes bundles, it maintains a manifest which describes what files webpack should load
+        // here we are extracting it to be able to start loading the files
+        // of the project faster instead of having to wait for the vendor
+        runtimeChunk: {
+          name: 'manifest',
         },
       },
       resolve: {
@@ -54,10 +61,6 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
             use: 'file-loader',
           },
         ],
-      },
-      output: {
-        filename: 'bundle.js',
-        chunkFilename: '[name].js',
       },
       plugins: [
         new HtmlWebpackPlugin({

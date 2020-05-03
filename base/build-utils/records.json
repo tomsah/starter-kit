@@ -1,0 +1,133 @@
+{
+  "HtmlWebpackCompiler": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/html-webpack-plugin/lib/loader.js!public/index.html": 0
+        },
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "chunks": {
+        "byName": {
+          "HtmlWebpackPlugin_0": 0
+        },
+        "bySource": {},
+        "usedIds": [0]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!node_modules/sass-loader/dist/cjs.js!src/main.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!node_modules/sass-loader/dist/cjs.js!src/main.scss": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [0]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "node_modules/react/index.js": 0,
+      "node_modules/@babel/runtime/helpers/getPrototypeOf.js": 1,
+      "node_modules/object-assign/index.js": 2,
+      "node_modules/react-dom/index.js": 3,
+      "node_modules/@babel/runtime/helpers/classCallCheck.js": 4,
+      "node_modules/@babel/runtime/helpers/createClass.js": 5,
+      "node_modules/@babel/runtime/helpers/inherits.js": 6,
+      "node_modules/@babel/runtime/helpers/possibleConstructorReturn.js": 7,
+      "node_modules/@babel/runtime/helpers/slicedToArray.js": 8,
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/button-styles/blue.js": 9,
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/button-styles/green.js": 10,
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/button-styles/red.js": 11,
+      "node_modules/react/cjs/react.production.min.js": 12,
+      "node_modules/react-dom/cjs/react-dom.production.min.js": 13,
+      "node_modules/scheduler/index.js": 14,
+      "node_modules/scheduler/cjs/scheduler.production.min.js": 15,
+      "node_modules/@babel/runtime/helpers/setPrototypeOf.js": 16,
+      "node_modules/@babel/runtime/helpers/typeof.js": 17,
+      "node_modules/@babel/runtime/helpers/assertThisInitialized.js": 18,
+      "node_modules/@babel/runtime/helpers/arrayWithHoles.js": 19,
+      "node_modules/@babel/runtime/helpers/iterableToArrayLimit.js": 20,
+      "node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js": 21,
+      "node_modules/@babel/runtime/helpers/arrayLikeToArray.js": 22,
+      "node_modules/@babel/runtime/helpers/nonIterableRest.js": 23,
+      "src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object": 24,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!node_modules/sass-loader/dist/cjs.js!src/main.scss": 25,
+      "node_modules/babel-loader/lib/index.js!src/index.js 97f69e25fb016dabda18b89675aec38b": 26,
+      "node_modules/gsap/index.js 2de73ac0a9bacf671442a9a00d08fd1a": 27,
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/dummyFooter/DummyFooter.js": 28,
+      "node_modules/babel-loader/lib/index.js!src/shared/components/example/dummyCardAnim/DummyCardAnim.js": 29
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23,
+      "24": 24,
+      "25": 25,
+      "26": 26,
+      "27": 27,
+      "28": 28,
+      "29": 29
+    }
+  },
+  "chunks": {
+    "byName": {
+      "blue": 0,
+      "green": 1,
+      "red": 2,
+      "DummyCardAnim": 3,
+      "footer": 4,
+      "main": 5,
+      "manifest": 6,
+      "vendors~DummyCardAnim": 7,
+      "vendors~main": 8
+    },
+    "bySource": {
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./blue": 0,
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./blue.js": 0,
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./green": 1,
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./green.js": 1,
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./red": 2,
+      "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./red.js": 2,
+      "1 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 3,
+      "0 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/dummyFooter/DummyFooter": 4,
+      "0 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 7
+    },
+    "usedIds": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  }
+}
