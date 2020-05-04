@@ -6,41 +6,42 @@ and control better, or you simply cannot use CRA in a technical test, and you ne
 By starting a project from this blueprint you should just be able to have all those tools setting properly and working
 together correctly.
 this is the base of technology configure together:
-- React
-- Webpack
-- Babel
-- Jest
+- [React](https://reactjs.org/)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Jest](https://jestjs.io/) // TODO
 - [Eslint](https://eslint.org/)
-- Prettier
-- Husky
-- sass
+- [Prettier](https://prettier.io/)
+- [Husky](https://github.com/typicode/husky)
+- [node-sass](https://www.npmjs.com/package/node-sass)
 
 in the future the goal is to create variation of this base for different scenarios such as
-- Redux
-- React router
-- with an express server
-- graphql
-- with cypress
+- [Redux](https://redux.js.org/) // TODO
+- [React-router](https://github.com/ReactTraining/react-router) // TODO
+- [express server](https://expressjs.com/) // TODO
+- [graphql](https://graphql.org/) // TODO
+- [cypress](https://www.cypress.io/) // TODO
 
 
 this is build after following some tutorials
 list of the main tutorial here:    
 [Testing javascript](https://testingjavascript.com/)   
 [Webpack fundamentals](https://frontendmasters.com/courses/webpack-fundamentals/)  
-[Webpack performance](https://frontendmasters.com/courses/performance-webpack/)  
+[Webpack performance](https://frontendmasters.com/courses/performance-webpack/) 
 
+books
+[survivejs webpack](https://survivejs.com/webpack/preface/) 
 
-### Ideal Performance Budget
- <= 200kb (uncompressed) Initial JS [total],   
- <=100kb  (uncompressed) Initial CSS [total],
+#### TODO next
+- add Jest
+- add react router + jest utils
+- add redux + jest redux setting
+- add cypress
+- add express
+- add testing for Node, and server
+- add graphql + jest graphql testing utils
 
-Initial = the amount of JS/CSS that you ship to get your initial experience loaded 
- 
- 90% code coverage (only 10% code unused) to be check on the Chrome dev tool (cmd + P)   
- so that's mean, 90% of the code your are shipping for you initial experienced is actually used    
-  !!!! You need a full source mapping turned on to have a useful feedback on the chrome dev tool to see what part
-   of the code has not been used.
-   
+#### Notes on Webpack
 ## code Splitting
 Creating at build time separate chunks of JS that will only be loaded asynchronously
 
@@ -75,3 +76,16 @@ webpack will use the static path "./src/themes/" go to that folder and, it will 
 ### The Preset config
 the point of presets is that you can add isolated functionality that allows you to experiment or test.
 you can just add on with a flag or add on with an extra script.
+
+## Ideal Performance Budget
+ <= 200kb (uncompressed) Initial JS [total],   
+ <=100kb  (uncompressed) Initial CSS [total],
+
+Initial = the amount of JS/CSS that you ship to get your initial experience loaded 
+ 
+ 90% code coverage (only 10% code unused) to be check on the Chrome dev tool (cmd + P)   
+ so that's mean, 90% of the code your are shipping for you initial experienced is actually used    
+  !!!! You need a full source mapping turned on to have a useful feedback on the chrome dev tool to see what part
+   of the code has not been used.
+
+#### Note on Jest
