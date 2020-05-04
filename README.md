@@ -9,7 +9,7 @@ this is the base of technology configure together:
 - [React](https://reactjs.org/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
-- [Jest](https://jestjs.io/) // TODO
+- [Jest](https://jestjs.io/) 
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
@@ -36,7 +36,7 @@ Article
 [webpack prefetch & preLoad](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c)
 
 #### TODO next
-- add Jest
+- add Jest WIP
 - add react router + jest utils
 - add redux + jest redux setting
 - add cypress
