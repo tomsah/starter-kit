@@ -32,6 +32,9 @@ list of the main tutorial here:
 books
 [survivejs webpack](https://survivejs.com/webpack/preface/) 
 
+Article
+[webpack prefetch & preLoad](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c)
+
 #### TODO next
 - add Jest
 - add react router + jest utils
@@ -40,6 +43,8 @@ books
 - add express
 - add testing for Node, and server
 - add graphql + jest graphql testing utils
+
+- add Typescript version for each project branch
 
 #### Notes on Webpack
 ## code Splitting
