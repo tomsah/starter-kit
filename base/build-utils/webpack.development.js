@@ -10,7 +10,7 @@ module.exports = () => ({
     rules: [
       {
         // Apply rule for .scss or .css files
-        test: /.(scss|css)$/,
+        test: /.(scss|sass)$/,
         exclude: /node_modules/,
         // Set loaders to transform files.
         // Loaders are applying from right to left(!)

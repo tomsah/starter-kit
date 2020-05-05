@@ -10,7 +10,7 @@ module.exports = () => ({
   module: {
     rules: [
       {
-        test: /.(scss|css)$/,
+        test: /.(scss|sass)$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,

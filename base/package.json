@@ -4,24 +4,45 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "npm run webpack -- --env.mode production",
+    "build:allPresets": "npm run build:compress -- --env.presets analyze",
+    "build:analyze": "npm run build -- --env.presets analyze",
+    "build:compress": "npm run build -- --env.presets compress",
+    "build:debug": "npm run debug -- --env.mode production",
     "check-format": "npm run prettier -- --list-different",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot --open",
     "dev:debug": "npm run debug -- --env.mode development",
     "format": "npm run prettier -- --write",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "jest --config test/jest.lint.js",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(json|js|jsx|css|html|md)\"",
-    "prod": "npm run webpack -- --env.mode production",
-    "prod:analyze": "npm run prod -- --env.presets analyze",
-    "prod:compress": "npm run prod -- --env.presets compress",
-    "prod:allPresets": "npm run prod:compress -- --env.presets analyze",
-    "prod:debug": "npm run debug -- --env.mode production",
     "start": "serve --no-clipboard --single --listen 8080 dist",
-    "validate": "npm-run-all --parallel check-format lint build",
+    "setup": "npm install && npm run validate",
+    "test": "is-ci \"test:coverage\" \"test:watch\"",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
+    "validate": "npm-run-all --parallel check-format test build",
     "webpack": "webpack",
     "webpack:json-profile": "webpack --profile --json > compilation-stats.json",
     "webpack-dev-server": "webpack-dev-server"
+  },
+  "jest-runner-eslint": {
+    "cliOptions": {
+      "ignorePath": "./.gitignore"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run build"
+    }
+  },
+  "lint-staged": {
+    "**/*.+(js|json|css|html|md)": [
+      "prettier",
+      "jest --findRelatedTests",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",

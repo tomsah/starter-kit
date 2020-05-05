@@ -1,6 +1,8 @@
 import React, {useState, useEffect, lazy, Suspense} from 'react'
-import imgExample from './../../assets/images/avatar.jpg'
+import {toUppercase} from '../../utils'
 
+import styles from './dummy.module.css'
+import imgExample from './../../assets/images/avatar.jpg'
 // import async.js
 // import('./async.js').then((data) => {
 //   console.log(data)
@@ -59,7 +61,9 @@ const Dummy = () => {
 
   return (
     <div className="dummy-box">
-      <h1>I am the Dummy Component</h1>
+      <h1 className={styles.dummyBorder}>
+        {toUppercase('Hellloooo from dummy')}
+      </h1>
       <img className="image-style" src={imgExample} alt="" />
       <button
         onClick={handleClick}

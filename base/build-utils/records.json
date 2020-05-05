@@ -14,7 +14,9 @@
           "HtmlWebpackPlugin_0": 0
         },
         "bySource": {},
-        "usedIds": [0]
+        "usedIds": [
+          0
+        ]
       }
     }
   ],
@@ -35,7 +37,9 @@
           "mini-css-extract-plugin": 0
         },
         "bySource": {},
-        "usedIds": [0]
+        "usedIds": [
+          0
+        ]
       }
     }
   ],
@@ -134,6 +138,16 @@
       "0 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/dummyFooter/DummyFooter": 4,
       "0 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 7
     },
-    "usedIds": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
   }
 }

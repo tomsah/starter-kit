@@ -31,6 +31,9 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
         runtimeChunk: {
           name: 'manifest',
         },
+        // make sure that vendor hash name file does not change when our app
+        // code changes
+        moduleIds: 'hashed',
       },
       resolve: {
         modules: ['node_modules', path.join(__dirname, 'src'), 'shared'],
@@ -55,6 +58,16 @@ module.exports = ({mode, presets} = {mode: 'production', presets: []}) => {
             test: /\.js$/,
             exclude: /node_modules/,
             use: 'babel-loader',
+          },
+          {
+            test: /\.module\.css$/,
+            use: [
+              {loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                options: {modules: true, localsConvention: 'camelCaseOnly'},
+              },
+            ],
           },
           {
             test: /\.(eot|svg|ttf|woff|woff2)$/,
