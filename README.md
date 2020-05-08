@@ -114,7 +114,9 @@ to keep track of the code coverage you can link travis to [codeCove](https://cod
 this will push your keep coverage report and keep track of them.
 this is set and ready to go, but we still need to create an account and/or set it by project.
 
+### Notes React testing Library
 
+- check [jest-dom](https://github.com/testing-library/jest-dom) to know which matcher is available
 
 #### General notes
 it is set in a way that if your build fails you cannot commit.
