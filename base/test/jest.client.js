@@ -5,7 +5,10 @@ module.exports = {
   // add a label to the client side test to improve test report readability
   displayName: 'client',
   //files that jest will run after it sets up the jest testing env
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    'jest-axe/extend-expect',
+  ],
   // necessary if you use your css in js (emotion, css-js, glamorous ...)
   // to see the css added in your snapshot
   // snapshotSerializers: ['jest-emotion'],
