@@ -24,8 +24,8 @@ const FavoriteNumber = ({min = 1, max = 9}) => {
 }
 
 FavoriteNumber.propTypes = {
-  min: PropTypes.number.isRequired,
-  max: PropTypes.number.isRequired,
+  min: PropTypes.number,
+  max: PropTypes.number,
 }
 
 export {FavoriteNumber}
