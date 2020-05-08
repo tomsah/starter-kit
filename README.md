@@ -117,6 +117,12 @@ this is set and ready to go, but we still need to create an account and/or set i
 ### Notes React testing Library
 
 - check [jest-dom](https://github.com/testing-library/jest-dom) to know which matcher is available
+- any method (coming from the render method), starting with a get (getByAttribute, getByRole, ...)   
+will through an error if it cannot find the element.   
+- any method (coming from the render method), starting with a query word (queryByAttribute, queryByRole, ...)   
+will return null if it cannot find the element.   
+- Favor the method prefix with the get verb, it will give a better error message in comparison with the method prefix
+ with query
 
 #### General notes
 it is set in a way that if your build fails you cannot commit.
