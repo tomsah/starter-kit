@@ -1,3 +1,5 @@
+// testing ../greeting-loader-02-dependency-injection.js
+
 import React from 'react'
 import {render, fireEvent, waitFor} from '@testing-library/react'
 import {GreetingLoader2} from '../greeting-loader-02-dependency-injection'

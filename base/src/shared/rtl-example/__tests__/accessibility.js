@@ -1,9 +1,12 @@
-// import 'jest-axe/extend-expect'
+// self contain file.
+// testing not related to any files
+// example of using jest-axe
+
 import React from 'react'
 import {render} from '@testing-library/react'
 import {axe} from 'jest-axe'
 
-function Form() {
+function Accessibility() {
   return (
     <form>
       <label htmlFor="email"> Email</label>
@@ -13,7 +16,7 @@ function Form() {
 }
 
 test('the form is accessible', async () => {
-  const {container} = render(<Form />)
+  const {container} = render(<Accessibility />)
   const results = await axe(container)
   expect(results).toHaveNoViolations()
 })
