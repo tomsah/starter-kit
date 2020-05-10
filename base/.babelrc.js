@@ -11,6 +11,8 @@ module.exports = {
     '@babel/preset-react',
   ],
   plugins: [
+    '@babel/plugin-proposal-class-properties', // allow you to write state
+    // ={} instead of this.state ={} in a class
     '@babel/plugin-transform-runtime',
     '@babel/plugin-syntax-dynamic-import', // support dynamic import for
     // code-spitting
