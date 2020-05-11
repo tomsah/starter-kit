@@ -106,6 +106,7 @@
     "sass-loader": "^8.0.2",
     "serve": "^11.3.0",
     "style-loader": "^1.2.0",
+    "test-data-bot": "^0.8.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.7.0",
@@ -117,6 +118,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router": "^5.1.2"
   }
 }
