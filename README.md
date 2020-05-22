@@ -1,11 +1,95 @@
-### Starter kit
+# Starter kit
+### motivation
+This is a personal project, where I try gather all the latest of my knowledge, tips and ticks about the React ecosystem
+,that I gather through work, friends, reading books, articles and tutorials.   
+I am trying to create a solution that works well for me. That I can understand and own.       
+The goal is to provide some ready-made, React environment with linting, formatting, testing, production ready
+build with webpack, all set, configured and ready to go.  
+To be able kick start React project fast and with confidence. 
 
-Personal project aiming to be a simple starting point for creating React applications in different scenarios.  
-there is the excellent create-react-app but sometimes you want to use something of or own, lighter that you understand
-and control better, or you simply cannot use CRA in a technical test, and you need a neat and quick start.
-By starting a project from this blueprint you should just be able to have all those tools setting properly and working
-together correctly.
-this is the base of technology configure together:
+The folder structure, naming convention, choice of package and technologies are obviously opinionated. 
+However, this is one structure that works well for me. 
+This should with time evolved, improved and get updated as often as I can.
+
+## how to use it
+ - git clone
+ - rename starter-kit folder ``` mv starter-kit [project-name]```
+ - cd to the project-name folder ``` cd [project-name]```
+ - reset git to your project repo 
+ -     rm -rf .git 
+       git remote add origin https://github.com/[repo-name]
+ - cd to the base folder ``` cd base``` (this need changing, unnecessary step)
+ - run ```npm i```
+ - for dev run ```npm run dev``` => it will launch the example app
+ - for prod run ``` npm run build```
+ 
+ ## Folder Structure
+ 
+ This is the folder structure after install
+ ```
+ base/
+     build-utils/ => all webpack config are living here
+         presets/ => webpack presets are living her
+             webpack.analyze.js // analyze of the build display in a graph
+             webpack.compress.js // compress build when used
+         loadPresets.js // load webpack presets
+         records.json // json of stats from the last webpack build
+     node_modules/
+     Notes/
+         general-notes 
+     public/
+         index.html
+     src/
+         shared/ => code for the app
+             __server_tests__/ => test code for server should be here if needed or removed
+             __tests__/ => test files for js files at this folder level
+                 utils.js // test code for the utils file
+             assets/ => assets folder such as fonts, svg, gif etc...
+                 images/ 
+             components/ => ui components code
+                 example/ => Ugly dummy app with test to illustrate, TO BE DELETED
+             server/ => code for server should be here if needed or TO BE DELETED
+             styles/ => Sass files
+             utils.js // Utils functions for the main app
+         App.js
+         index.js
+         main.scss
+     test/ => jest helpers and test utils
+         file-mock.js // mock file utils
+         jest-client.js // jest config for client test
+         jest.lint.js // jest config for jest running eslint
+         jest.server.js // jest config for server test
+         jest-common.js // jest config shared by client and server 
+         style-mock.js // jest util to mock css module, can be removed if not needed
+     .babelrc.js // babel config file
+     .eslintrc.js // eslint config file
+     .gitignore // file to be ignored by git
+     .huskyrc// husky setting (run some check before commit)
+     .lintstagedrc // lint staged config (run linter only on file that are going to be commited)
+     .prettierrc // prettier config (formatting )
+     .travils.yml // travis config for ci integration
+     jest.config.js // jest config entry point
+     package.json // mother of all truth
+     postcss.config.js // post css config file, (uglyfy css for prod)
+     webpack.config.js // webpack config entry point
+ README.md // you are here!!
+ ```
+## Repo organisation   
+Master branch will be the simplest branch of all with only React & jest.
+That way it will be easier to decline and extend with other technologies to other branch.
+
+all projects are not in need of redux, graphQl, router or E2E testing. To avoid having unnecessary code and packages
+I will keep each branch with its own stack of technology added to react.
+
+- master => React + Sass + Jest + React testing Library 
+- Router => React + Sass + React-router + Jest + React testing Library // TODO
+- Redux => React + Sass + Redux + Jest + React testing Library // TODO
+- graphql => React + Sass + graphql + Jest + React testing Library  // TODO
+- Full =>  React + Sass + React-router + Redux + Jest + React testing Library + cypress // TODO
+- Express/Redux => React + Sass + React-router + express router + Redux + Jest + React testing Library + cypress // TODO
+- Express/graphql => React + Sass + React-router + express router + graphql + Jest + React testing Library + cypress // TODO
+
+## Technologies used
 - [React](https://reactjs.org/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
@@ -15,128 +99,34 @@ this is the base of technology configure together:
 - [Husky](https://github.com/typicode/husky)
 - [Travis](https://travis-ci.com/)
 - [node-sass](https://www.npmjs.com/package/node-sass)
+- [React-testing-library](https://testing-library.com/docs/react-testing-library/intro)
+- [Redux](https://redux.js.org/) // To be added
+- [React-router](https://github.com/ReactTraining/react-router) // To be added
+- [express server](https://expressjs.com/) // To be added
+- [graphql](https://graphql.org/) // To be added
+- [cypress](https://www.cypress.io/) // To be added
 
-in the future the goal is to create variation of this base for different scenarios such as
-- [Redux](https://redux.js.org/) // TODO
-- [React-router](https://github.com/ReactTraining/react-router) // TODO
-- [express server](https://expressjs.com/) // TODO
-- [graphql](https://graphql.org/) // TODO
-- [cypress](https://www.cypress.io/) // TODO
-
-
-this is build after following some tutorials
-list of the main tutorial here:    
-[Testing javascript](https://testingjavascript.com/)   
-[Webpack fundamentals](https://frontendmasters.com/courses/webpack-fundamentals/)  
-[Webpack performance](https://frontendmasters.com/courses/performance-webpack/) 
-
-books
-[survivejs webpack](https://survivejs.com/webpack/preface/) 
-
-Article
-[webpack prefetch & preLoad](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c)
-
-#### TODO next
-- add Jest WIP
+##TODO next
+- add Jest and React testing library WIP
 - add react router + jest utils
 - add redux + jest redux setting
 - add cypress
 - add express
 - add testing for Node, and server
 - add graphql + jest graphql testing utils
-
 - add Typescript version for each project branch
 
-#### Notes on Webpack
-## code Splitting
-Creating at build time separate chunks of JS that will only be loaded asynchronously
+## Reference
+###Tutorial  
+[Testing javascript](https://testingjavascript.com/)   
+[Webpack fundamentals](https://frontendmasters.com/courses/webpack-fundamentals/)  
+[Webpack performance](https://frontendmasters.com/courses/performance-webpack/) 
 
-"Code splitting exists to solve performance, and to solve the number 1 problem of performance, which is the amount of
- JavaScript you ship on your initial experience"
+####Books
+[survivejs webpack](https://survivejs.com/webpack/preface/) 
 
-what does webpack under the hood???
-it takes your entry point,   
-it passes it to a resolver (just making sure the file exists)   
-it reads the source code, parse it and look for the dependency statements (like imports, requires, the commonJS
-, AMD syntax etc.)   
-for code splitting 
-when webpack spots dependencies instead to include it in its main graph it will create a new separate bundle
-for that chunk.  
- 
- dynamic import = import() (it is a web specification [whatwg/loader](https://github.com/whatwg/loader))   
- this allows you in a browser to just at run time dynamically fetch any piece of JS and use it like a module.
-
-there are 2 types of code splitting
-- static 
-heavy libraries are a good use cases, you need 3js but not with initial load
-anything temporal, if it is not there initially, it appears and then go away (modal, tooltip)
-anything that's not visible on the page and will conditionally load (even things like scrolling down the page)
-Routes, you can code split for each route and serve only what is needed
-
-- "dynamic"" (in quote cause in webpack nothing is purely dynamic, everything it does is at build tine.)
-example: const getTheme = (themeName) => import(`./src/themes/${themeName}`)
-what's happening ?   
-webpack will use the static path "./src/themes/" go to that folder and, it will find all the modules in this partial
- path. then it will create a bundle for each one of them.
-    
-### The Preset config
-the point of presets is that you can add isolated functionality that allows you to experiment or test.
-you can just add on with a flag or add on with an extra script.
-
-## Ideal Performance Budget
- <= 200kb (uncompressed) Initial JS [total],   
- <=100kb  (uncompressed) Initial CSS [total],
-
-Initial = the amount of JS/CSS that you ship to get your initial experience loaded 
- 
- 90% code coverage (only 10% code unused) to be check on the Chrome dev tool (cmd + P)   
- so that's mean, 90% of the code your are shipping for you initial experienced is actually used    
-  !!!! You need a full source mapping turned on to have a useful feedback on the chrome dev tool to see what part
-   of the code has not been used.
-
-#### Note on Jest
-
-- Jest is running in node and is not supporting import statement out of the box
-- Jest automatically pick up the babelrc file and apply the configuration 
-- Jest using JSDOM to simulate a browser environment in node 
-
-## Debug Jest
-- See the test:debug script   
-this should allow you, if put a debugger statement in your code   
-to access to the node chrome dev tool while running your test, 
-so you can inspect and debug your code while testing with Jest
-=> after running: npm run test:debug, go to chrome and type chrome://inspect   
-you should see you debugging session and can access to the code with teh debugger statement
-
-## Coverage
-with the use of the is-ci-cli package we can run coverage only when on non-dev env
-to keep track of the code coverage you can link travis to [codeCove](https://codecov.io/).
-this will push your keep coverage report and keep track of them.
-this is set and ready to go, but we still need to create an account and/or set it by project.
+###Articles
+[webpack prefetch & preLoad](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c)
 
 
 
-#### General notes
-it is set in a way that if your build fails you cannot commit.
-for the build to pass we: 
-- format the code 
-- lint the code
-- run the suit of tests
-- webpack build 
-all those steps needs to be successful
-
-there is as well a travis file ready with some basic script to run (to be improved)
-
-Webpack is set to handle
-- separate dev and prod config
-- adding preset on demand
-- inlining or not image depending on file size
-- code splitting 
-- tree shaking
-- compile sass
-- analyze build
-- compressed build if needed
-- hot module replacement for dev
-- using the hash file name to ensure files produced by webpack compilation can    
-remain cached unless their content has changed. 
-- enforcing performance budget
