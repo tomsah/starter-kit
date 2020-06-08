@@ -117,15 +117,15 @@ I will keep each branch with its own stack of technology added to react.
 - add Typescript version for each project branch
 
 ## Reference
-###Tutorial  
+### Tutorial  
 [Testing javascript](https://testingjavascript.com/)   
 [Webpack fundamentals](https://frontendmasters.com/courses/webpack-fundamentals/)  
 [Webpack performance](https://frontendmasters.com/courses/performance-webpack/) 
 
-####Books
+### Books
 [survivejs webpack](https://survivejs.com/webpack/preface/) 
 
-###Articles
+### Articles
 [webpack prefetch & preLoad](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c)
 
 
