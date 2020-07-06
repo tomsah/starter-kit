@@ -125,7 +125,10 @@
       "main": 5,
       "manifest": 6,
       "vendors~DummyCardAnim": 7,
-      "vendors~main": 8
+      "vendors~main": 8,
+      "Dummy": 9,
+      "DummyPageTwo": 10,
+      "vendors~Dummy": 11
     },
     "bySource": {
       "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./blue": 0,
@@ -136,18 +139,24 @@
       "0 src/shared/components/example/button-styles lazy /^\\.\\/.*$/ groupOptions: {} namespace object ./red.js": 2,
       "1 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 3,
       "0 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/dummyFooter/DummyFooter": 4,
-      "0 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 7
+      "0 node_modules/babel-loader/lib/index.js!src/shared/components/example/Dummy.js ./dummyCardAnim/DummyCardAnim": 7,
+      "1 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/Dummy": 9,
+      "0 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/dummyPage2/DummyPageTwo": 10,
+      "0 node_modules/babel-loader/lib/index.js!src/App.js ./shared/components/example/Dummy": 11
     },
     "usedIds": [
       0,
       1,
+      10,
+      11,
       2,
       3,
       4,
       5,
       6,
       7,
-      8
+      8,
+      9
     ]
   }
 }
