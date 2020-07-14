@@ -1,16 +1,14 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const DummyNav = () => (
   <div className="dummy-nav">
     <ul>
       <li>
-        <NavLink to="/" exact>
-          Home
-        </NavLink>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <NavLink to="/page2">page 2</NavLink>
+        <Link to="/about">About</Link>
       </li>
     </ul>
   </div>

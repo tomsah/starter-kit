@@ -3,10 +3,6 @@ import {toUppercase} from '../../utils'
 
 import styles from './dummy.module.css'
 import imgExample from './../../assets/images/avatar.jpg'
-// import async.js
-// import('./async.js').then((data) => {
-//   console.log(data)
-// })
 
 // TODO: manged to extract the style and apply it
 // the code splitting bit is working we are only get the color related files
@@ -61,9 +57,7 @@ const Dummy = () => {
 
   return (
     <div className="dummy-box">
-      <h1 className={styles.dummyBorder}>
-        {toUppercase('Hellloooo from dummy')}
-      </h1>
+      <h1 className={styles.dummyBorder}>{toUppercase('Homepage')}</h1>
       <img className="image-style" src={imgExample} alt="" />
       <button
         onClick={handleClick}

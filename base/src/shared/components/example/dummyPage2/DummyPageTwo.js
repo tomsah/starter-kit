@@ -3,7 +3,7 @@ import {toUppercase} from '../../../utils'
 
 const DummyPageTwo = () => (
   <div className="dummy-box">
-    <h1>{toUppercase('Dummy Page 2')}</h1>
+    <h1>{toUppercase('About page')}</h1>
   </div>
 )
 
