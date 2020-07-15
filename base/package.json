@@ -85,7 +85,7 @@
     "eslint-import-resolver-jest": "^3.0.0",
     "file-loader": "^6.0.0",
     "gsap": "^3.2.6",
-    "history": "^5.0.0",
+    "history": "4.10.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "http-server": "^0.12.1",
