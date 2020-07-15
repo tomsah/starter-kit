@@ -36,6 +36,6 @@ test('renders homepage by default and can navigate to about', async () => {
   screen.debug()
   const link = screen.getByRole('link', {name: /about/i})
   userEvent.click(link)
+  await waitFor(() => screen.getByText(/About page/i))
   screen.debug()
-  // await waitFor(() => screen.getByText(/About page/i))
 })
